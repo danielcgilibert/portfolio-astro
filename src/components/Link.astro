@@ -1,0 +1,14 @@
+---
+export interface Props {
+  href: string
+}
+
+const { href } = Astro.props
+---
+
+<a
+  class="flex justify-center items-center gap-2 hover:text-neutral-200"
+  href={href}
+>
+  <slot />
+</a>

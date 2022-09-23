@@ -1,0 +1,19 @@
+---
+export interface Props {
+  src: string
+  alt: string
+  title: string
+  w?: number
+  h?: number
+}
+
+const { w = 11, h = 11, src, alt, title, ...attrs } = Astro.props
+---
+
+<img
+  class={`w-${w} h-${h} rounded-full`}
+  src={src}
+  alt={alt}
+  title={title}
+  {...attrs}
+/>

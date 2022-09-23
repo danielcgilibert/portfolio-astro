@@ -1,0 +1,178 @@
+---
+import Card from '../components/Card.astro'
+import Link from '../components/Link.astro'
+import Nav from '../components/Nav.astro'
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Daniel Carmona Gilibert">
+  <header>
+    <Nav />
+  </header>
+
+  <main class="grid grid-cols-1 mt-5 md:mt-12 gap-y-16">
+    <header
+      id="header"
+      class="flex flex-col justify-center items-center gap-y-2 md:gap-0"
+    >
+      <div class="flex md:flex-row flex-col justify-center items-center gap-5">
+        <img
+          src="profile.jpeg"
+          class="bg-gradient-to-t from-[#11111100] via-[#fde48b08] to-[#FDE48B] p-1.5 rounded-full md:w-44 md:h-44 w-36 h-36 object-cover"
+          alt="profile"
+        />
+
+        <div class="flex flex-col gap-y-2">
+          <h1
+            class="text-center md:text-left md:text-5xl text-2xl leading-9 font-medium"
+          >
+            Hola soy Daniel. <br /> Front-End Developer
+          </h1>
+          <div class="flex gap-x-10">
+            <Link href="https://google.com">
+              <img class="w-6 h-6" src="github.svg" />GitHub</Link
+            >
+
+            <Link href="https://google.com"
+              ><img class="w-6 h-6" src="linkedin.svg" />LinkedIn</Link
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="proyectos" class="flex flex-col gap-y-5">
+      <h1 class="text-left text-2xl leading-9 font-medium">Projectos</h1>
+      <article class="flex flex-col items-center gap-y-5">
+        <div class="grid grid-cols-1 md:grid-cols-3 md:gap-x-5 gap-y-5">
+          <Link href="https:google.com">
+            <Card
+              border="t"
+              title="filmoteca"
+              img="filmoteca.jpeg"
+              hrefWeb="google.com"
+              hrefCode="google.com"
+            />
+          </Link>
+
+          <Card
+            border="t"
+            title="fiber"
+            img="fiber.png"
+            hrefWeb="google.com"
+            hrefCode="google.com"
+          />
+
+          <Card
+            border="t"
+            title="chart"
+            img="chart.png"
+            hrefWeb="google.com"
+            hrefCode="google.com"
+          />
+
+          <Card
+            border="t"
+            title="portfolio"
+            img="otherPortfolio.png"
+            hrefWeb="google.com"
+            hrefCode="google.com"
+          />
+
+          <Card
+            border="t"
+            title="portfolio"
+            img="fiber.png"
+            hrefWeb="google.com"
+            hrefCode="google.com"
+          />
+
+          <Card
+            border="t"
+            title="portfolio"
+            img="chart.png"
+            hrefWeb="google.com"
+            hrefCode="google.com"
+          />
+        </div>
+
+        <footer class="flex flex-col justify-center items-center">
+          <span class="text-gray">Más proyectos en</span>
+          <Link href="https://google.com">
+            <img class="w-6 h-6" src="github.svg" />GitHub</Link
+          >
+        </footer>
+      </article>
+    </section>
+
+    <section id="sobreMi" class="flex flex-col gap-y-5 text-left">
+      <h1 class="text-2xl leading-9 font-medium">Sobre Mi</h1>
+      <article class="flex flex-col gap-y-5">
+        <div class="flex flex-col gap-y-5 leading-8 text-gray">
+          <p>
+            Siempre interasado en seguir desarrollando en este apasionante mundo
+            del desarrollo.
+          </p>
+          <p>
+            Enfocado en ofrecer el mejor producto al cliente de forma fácil y
+            efectiva.
+          </p>
+
+          <p>
+            Cualquier duda o simplemente si estas interesado/a en mi no dudes en
+            conctarme en LinkedIn.
+          </p>
+
+          <!-- <p>Tecgnologias que utilizo :</p>
+
+          <ul class="flex flex-wrap justify-center  w-12/12 gap-3">
+            <li>
+              <Icon src="html.webp" alt="htmlicon" title="HTML" />
+            </li>
+
+            <li>
+              <Icon src="css.png" alt="cssicon" title="CSS" />
+            </li>
+
+            <li>
+              <Icon src="js.png" alt="jsicon" title="JavaScript" />
+            </li>
+            <li>
+              <Icon src="react.jpeg" alt="reacticon" title="React" />
+            </li>
+
+            <li>
+              <Icon src="next.png" alt="nextjsicon" title="nextjs" />
+            </li>
+
+            <li>
+              <Icon src="docker.jpg" alt="dockericon" title="docker" />
+            </li>
+
+            <li>
+              <Icon src="ts.png" alt="typescripticon" title="typescript" />
+            </li>
+          </ul> -->
+          <span class="flex justify-center items-center gap-2 text-white">
+            <Link href="https://google.com"
+              ><img class="w-6 h-6" src="linkedin.svg" />LinkedIn</Link
+            >
+          </span>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="border-t-2 border-white text-gray mt-16">
+    <ul class="grid grid-cols-2 grid-rows-3 gap-y-5 p-5 text-center">
+      <li><Link href="#header">Home</Link></li>
+      <li><Link href="#proyectos">Proyectos</Link></li>
+      <li><Link href="#sobreMi">Sobre Mi</Link></li>
+      <li><Link href="https://google.com">LinkedIn</Link></li>
+      <li class="col-span-2"><Link href="https://google.com">GitHub</Link></li>
+      <li class="col-span-2 row-span-3">
+        Desarrollado con Astro y TailwindCSS
+      </li>
+    </ul>
+  </footer>
+</Layout>
