@@ -2,7 +2,8 @@
 import { Image } from '@astrojs/image/components'
 import github from '../assets/github.svg'
 import linkedin from '../assets/linkedin.svg'
-import profile from '../assets/profile.jpeg'
+
+import profile from '../assets/profile.jpg'
 import Footer from '../components/Footer.astro'
 import Link from '../components/Link.astro'
 import ListProjects from '../components/ListProjects.astro'
@@ -35,21 +36,12 @@ import Layout from '../layouts/Layout.astro'
           </h1>
           <div class="flex gap-x-10">
             <Link href="https://google.com">
-              <Image
-                src={github}
-                width={24}
-                height={24}
-                alt="github"
-              />GitHub</Link
+              <img class="w-6 h-6" src={github} />
+              GitHub</Link
             >
 
             <Link href="https://google.com">
-              <Image
-                src={linkedin}
-                width={24}
-                height={24}
-                alt="linkedin"
-              />LinkedIn</Link
+              <img class="w-6 h-6" src={linkedin} />LinkedIn</Link
             >
           </div>
         </div>
@@ -63,8 +55,9 @@ import Layout from '../layouts/Layout.astro'
         <footer class="flex flex-col justify-center items-center">
           <span class="text-gray">Más proyectos en</span>
           <Link href="https://google.com">
-            <img class="w-6 h-6" src="github.svg" />GitHub</Link
-          >
+            <img class="w-6 h-6" src={github} />
+            GitHub
+          </Link>
         </footer>
       </article>
     </section>
@@ -87,39 +80,9 @@ import Layout from '../layouts/Layout.astro'
             conctarme en LinkedIn.
           </p>
 
-          <!-- <p>Tecgnologias que utilizo :</p>
-
-          <ul class="flex flex-wrap justify-center  w-12/12 gap-3">
-            <li>
-              <Icon src="html.webp" alt="htmlicon" title="HTML" />
-            </li>
-
-            <li>
-              <Icon src="css.png" alt="cssicon" title="CSS" />
-            </li>
-
-            <li>
-              <Icon src="js.png" alt="jsicon" title="JavaScript" />
-            </li>
-            <li>
-              <Icon src="react.jpeg" alt="reacticon" title="React" />
-            </li>
-
-            <li>
-              <Icon src="next.png" alt="nextjsicon" title="nextjs" />
-            </li>
-
-            <li>
-              <Icon src="docker.jpg" alt="dockericon" title="docker" />
-            </li>
-
-            <li>
-              <Icon src="ts.png" alt="typescripticon" title="typescript" />
-            </li>
-          </ul> -->
           <span class="flex justify-center items-center gap-2 text-white">
             <Link href="https://google.com"
-              ><img class="w-6 h-6" src="linkedin.svg" />LinkedIn</Link
+              ><img class="w-6 h-6" src={linkedin} />LinkedIn</Link
             >
           </span>
         </div>
