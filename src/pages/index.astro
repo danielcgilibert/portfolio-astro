@@ -1,10 +1,8 @@
 ---
 import { Image } from '@astrojs/image/components'
-import github from '../assets/github.svg'
-import linkedin from '../assets/linkedin.svg'
-
 import profile from '../assets/profile.jpg'
 import Footer from '../components/Footer.astro'
+import Icon from '../components/Icon.astro'
 import Link from '../components/Link.astro'
 import ListProjects from '../components/ListProjects.astro'
 import Nav from '../components/Nav.astro'
@@ -26,6 +24,7 @@ import Layout from '../layouts/Layout.astro'
           src={profile}
           class="bg-gradient-to-t from-[#11111100] via-[#fde48b08] to-[#FDE48B] p-1.5 rounded-full md:w-44 md:h-44 w-36 h-36 object-cover"
           alt="profile"
+          format="webp"
         />
 
         <div class="flex flex-col gap-y-2">
@@ -35,13 +34,12 @@ import Layout from '../layouts/Layout.astro'
             Hola soy Daniel. <br /> Front-End Developer
           </h1>
           <div class="flex gap-x-10">
-            <Link href="https://google.com">
-              <img class="w-6 h-6" src={github} />
-              GitHub</Link
+            <Link href="https://google.com"
+              ><Icon w={6} h={6} name="github" />GitHub</Link
             >
 
-            <Link href="https://google.com">
-              <img class="w-6 h-6" src={linkedin} />LinkedIn</Link
+            <Link href="https://google.com"
+              ><Icon w={6} h={6} name="linkedin" />LinkedIn</Link
             >
           </div>
         </div>
@@ -49,15 +47,14 @@ import Layout from '../layouts/Layout.astro'
     </header>
 
     <section id="proyectos" class="flex flex-col gap-y-5">
-      <h1 class="text-left text-2xl leading-9 font-medium">Projectos</h1>
+      <h1 class="text-left text-2xl leading-9 font-medium">Proyectos</h1>
       <article class="flex flex-col items-center gap-y-5">
         <ListProjects />
         <footer class="flex flex-col justify-center items-center">
           <span class="text-gray">Más proyectos en</span>
-          <Link href="https://google.com">
-            <img class="w-6 h-6" src={github} />
-            GitHub
-          </Link>
+          <Link href="https://google.com"
+            ><Icon w={6} h={6} name="github" />GitHub</Link
+          >
         </footer>
       </article>
     </section>
@@ -82,7 +79,7 @@ import Layout from '../layouts/Layout.astro'
 
           <span class="flex justify-center items-center gap-2 text-white">
             <Link href="https://google.com"
-              ><img class="w-6 h-6" src={linkedin} />LinkedIn</Link
+              ><Icon w={6} h={6} name="linkedin" />LinkedIn</Link
             >
           </span>
         </div>
