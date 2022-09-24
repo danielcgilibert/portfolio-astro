@@ -1,23 +1,35 @@
 ---
+import { Image } from '@astrojs/image/components'
+
 export interface Props {
   title: string
   img: string
   border: string
   hrefCode: string
   hrefWeb: string
+  width?: number
+  height?: number
 }
 
 const {
-  title = null,
+  title = 'null',
   border = 't',
   img = null,
   hrefCode = null,
   hrefWeb = null,
+  width = 300,
+  height = 250,
 } = Astro.props
 ---
 
 <div
   class={`rounded-lg bg-gradient-to-${border} from-[#11111100] via-[#fde48b08] to-[#fde48bce] hover:-translate-y-2 duration-300	`}
 >
-  <img class="w-full h-36 rounded-lg p-0.5 object-cover object-top" src={img} />
+  <Image
+    width={width}
+    height={height}
+    alt={title}
+    class="rounded-lg p-0.5 object-cover object-top"
+    src={img}
+  />
 </div>

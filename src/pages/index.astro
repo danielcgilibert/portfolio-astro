@@ -1,6 +1,11 @@
 ---
-import Card from '../components/Card.astro'
+import { Image } from '@astrojs/image/components'
+import github from '../assets/github.svg'
+import linkedin from '../assets/linkedin.svg'
+import profile from '../assets/profile.jpeg'
+import Footer from '../components/Footer.astro'
 import Link from '../components/Link.astro'
+import ListProjects from '../components/ListProjects.astro'
 import Nav from '../components/Nav.astro'
 import Layout from '../layouts/Layout.astro'
 ---
@@ -16,8 +21,8 @@ import Layout from '../layouts/Layout.astro'
       class="flex flex-col justify-center items-center gap-y-2 md:gap-0"
     >
       <div class="flex md:flex-row flex-col justify-center items-center gap-5">
-        <img
-          src="profile.jpeg"
+        <Image
+          src={profile}
           class="bg-gradient-to-t from-[#11111100] via-[#fde48b08] to-[#FDE48B] p-1.5 rounded-full md:w-44 md:h-44 w-36 h-36 object-cover"
           alt="profile"
         />
@@ -30,11 +35,21 @@ import Layout from '../layouts/Layout.astro'
           </h1>
           <div class="flex gap-x-10">
             <Link href="https://google.com">
-              <img class="w-6 h-6" src="github.svg" />GitHub</Link
+              <Image
+                src={github}
+                width={24}
+                height={24}
+                alt="github"
+              />GitHub</Link
             >
 
-            <Link href="https://google.com"
-              ><img class="w-6 h-6" src="linkedin.svg" />LinkedIn</Link
+            <Link href="https://google.com">
+              <Image
+                src={linkedin}
+                width={24}
+                height={24}
+                alt="linkedin"
+              />LinkedIn</Link
             >
           </div>
         </div>
@@ -44,58 +59,7 @@ import Layout from '../layouts/Layout.astro'
     <section id="proyectos" class="flex flex-col gap-y-5">
       <h1 class="text-left text-2xl leading-9 font-medium">Projectos</h1>
       <article class="flex flex-col items-center gap-y-5">
-        <div class="grid grid-cols-1 md:grid-cols-3 md:gap-x-5 gap-y-5">
-          <Link href="https:google.com">
-            <Card
-              border="t"
-              title="filmoteca"
-              img="filmoteca.jpeg"
-              hrefWeb="google.com"
-              hrefCode="google.com"
-            />
-          </Link>
-
-          <Card
-            border="t"
-            title="fiber"
-            img="fiber.png"
-            hrefWeb="google.com"
-            hrefCode="google.com"
-          />
-
-          <Card
-            border="t"
-            title="chart"
-            img="chart.png"
-            hrefWeb="google.com"
-            hrefCode="google.com"
-          />
-
-          <Card
-            border="t"
-            title="portfolio"
-            img="otherPortfolio.png"
-            hrefWeb="google.com"
-            hrefCode="google.com"
-          />
-
-          <Card
-            border="t"
-            title="portfolio"
-            img="fiber.png"
-            hrefWeb="google.com"
-            hrefCode="google.com"
-          />
-
-          <Card
-            border="t"
-            title="portfolio"
-            img="chart.png"
-            hrefWeb="google.com"
-            hrefCode="google.com"
-          />
-        </div>
-
+        <ListProjects />
         <footer class="flex flex-col justify-center items-center">
           <span class="text-gray">Más proyectos en</span>
           <Link href="https://google.com">
@@ -163,16 +127,5 @@ import Layout from '../layouts/Layout.astro'
     </section>
   </main>
 
-  <footer class="border-t-2 border-white text-gray mt-16">
-    <ul class="grid grid-cols-2 grid-rows-3 gap-y-5 p-5 text-center">
-      <li><Link href="#header">Home</Link></li>
-      <li><Link href="#proyectos">Proyectos</Link></li>
-      <li><Link href="#sobreMi">Sobre Mi</Link></li>
-      <li><Link href="https://google.com">LinkedIn</Link></li>
-      <li class="col-span-2"><Link href="https://google.com">GitHub</Link></li>
-      <li class="col-span-2 row-span-3">
-        Desarrollado con Astro y TailwindCSS
-      </li>
-    </ul>
-  </footer>
+  <Footer />
 </Layout>
