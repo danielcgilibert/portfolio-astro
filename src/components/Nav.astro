@@ -16,7 +16,7 @@ import Icon from './Icon.astro'
 
   <div
     id="navMobile"
-    class="bg-zinc-900 absolute top-0 left-0 w-full z-50 h-screen transition-all duration-700"
+    class="bg-zinc-900 hidden absolute top-0 left-0 w-full z-50 h-screen transition-all duration-700"
   >
     <Icon
       additionalClass="absolute top-10 right-10 stroke-white fill-white md:hidden"
@@ -41,6 +41,7 @@ import Icon from './Icon.astro'
   const body = document.body
   iconMenu!.addEventListener('click', () => {
     navMobile!.classList.toggle('hidden')
+
     body.classList.add('overflow-hidden')
   })
 
