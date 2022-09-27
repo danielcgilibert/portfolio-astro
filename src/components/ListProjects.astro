@@ -7,7 +7,7 @@ import Link from './Link.astro'
 <div class="grid grid-cols-1 md:grid-cols-3 md:gap-x-5 gap-y-5">
   {
     proyects.map(({ cover, name, hrefWeb, hrefCode }) => (
-      <Link href={hrefCode}>
+      <Link href="/portfolio-astro/proyect/grid">
         <Card
           border="t"
           title={name}

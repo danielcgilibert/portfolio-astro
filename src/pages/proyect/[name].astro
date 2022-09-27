@@ -1,0 +1,9 @@
+---
+export async function getStaticPaths() {
+  return [{ params: { name: 'grid' }, props: { name: 'grasd' } }]
+}
+
+const { name } = Astro.params
+---
+
+<p>Artículo: {name}</p>
