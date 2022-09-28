@@ -1,9 +1,34 @@
 ---
+import { Image } from '@astrojs/image/components'
+import Footer from '../../components/Footer.astro'
+import { proyects } from '../../data/projects'
+import Layout from '../../layouts/Layout.astro'
+
 export async function getStaticPaths() {
-  return [{ params: { name: 'grid' }, props: { name: 'grasd' } }]
+  return proyects.map(({ name, desc, cover, hrefCode, hrefWeb }) => {
+    return {
+      params: { name },
+      props: { name, desc, hrefCode, hrefWeb, cover },
+    }
+  })
 }
 
-const { name } = Astro.params
+const { name, desc, hrefCode, hrefWeb, cover } = Astro.props
 ---
 
-<p>Artículo: {name}</p>
+<Layout>
+  <p>Artículo: {name}</p>
+  <p>{desc}</p>
+  <Image
+    width={500}
+    height={500}
+    alt={name}
+    class="rounded-lg p-0.5 object-cover object-top"
+    quality={100}
+    src={import(`../../assets/${cover}.jpg`)}
+  />
+  <p>{hrefCode}</p>
+  <p>{hrefWeb}</p>
+
+  <Footer />
+</Layout>
