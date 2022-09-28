@@ -29,7 +29,7 @@ export const proyects = [
   },
   {
     cover: 'grid',
-    name: 'Grid ',
+    name: 'Layout Grid',
     desc: 'Gráfica dinamica',
     hrefCode: 'https://github.com/danielcgilibert/Fiber-Landing-Page',
     hrefWeb: 'https://danielcgilibert.github.io/Fiber-Landing-Page/',
@@ -37,7 +37,7 @@ export const proyects = [
 
   {
     cover: 'product',
-    name: 'Grid ',
+    name: 'product',
     desc: 'Gráfica dinamica',
     hrefCode: 'https://github.com/danielcgilibert/Fiber-Landing-Page',
     hrefWeb: 'https://danielcgilibert.github.io/Fiber-Landing-Page/',
