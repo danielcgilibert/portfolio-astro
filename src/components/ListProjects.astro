@@ -19,3 +19,31 @@ import Link from './Link.astro'
     ))
   }
 </div>
+<button class="bg-gray bg-opacity-10 rounded-lg w-1/2">Ver más</button>
+
+<style>
+  div :global(a):nth-child(n + 4) {
+    @apply hidden;
+  }
+</style>
+
+<script>
+  const buttonShowMore = document.querySelector(
+    '#proyectos button'
+  ) as HTMLInputElement
+  const proyects = document.querySelectorAll(
+    '#proyectos article > div > a:nth-child(n + 4)'
+  )
+
+  buttonShowMore.addEventListener('click', () => {
+    proyects.forEach(proyect => {
+      if (window.getComputedStyle(proyect).display === 'none') {
+        proyect.style.setProperty('display', 'flex')
+        buttonShowMore.innerText = 'Ver menos'
+      } else {
+        proyect.style.setProperty('display', 'none')
+        buttonShowMore.innerText = 'Ver más'
+      }
+    })
+  })
+</script>

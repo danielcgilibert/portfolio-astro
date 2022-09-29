@@ -45,19 +45,6 @@ import Layout from '../layouts/Layout.astro'
       </div>
     </header>
 
-    <section id="proyectos" class="flex flex-col gap-y-5">
-      <h1 class="text-left text-2xl leading-9 font-medium">Proyectos</h1>
-      <article class="flex flex-col items-center gap-y-5">
-        <ListProjects />
-        <footer class="flex flex-col justify-center items-center">
-          <span class="text-gray">Más proyectos en</span>
-          <Link href="https://google.com"
-            ><Icon w={6} h={6} name="github" />GitHub</Link
-          >
-        </footer>
-      </article>
-    </section>
-
     <section id="sobreMi" class="flex flex-col gap-y-5 text-left">
       <h1 class="text-2xl leading-9 font-medium">Sobre Mi</h1>
       <article class="flex flex-col gap-y-5">
@@ -82,6 +69,19 @@ import Layout from '../layouts/Layout.astro'
             >
           </span>
         </div>
+      </article>
+    </section>
+
+    <section id="proyectos" class="flex flex-col gap-y-5">
+      <h1 class="text-left text-2xl leading-9 font-medium">Proyectos</h1>
+      <article class="flex flex-col items-center gap-y-5">
+        <ListProjects />
+        <footer class="flex flex-col justify-center items-center">
+          <span class="text-gray">Más proyectos en</span>
+          <Link href="https://google.com"
+            ><Icon w={6} h={6} name="github" />GitHub</Link
+          >
+        </footer>
       </article>
     </section>
   </main>
