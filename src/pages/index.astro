@@ -8,83 +8,66 @@ import ListProjects from '../components/ListProjects.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
-<Layout title="Daniel Carmona Gilibert">
-  <header>
-    <!-- <Nav /> -->
-  </header>
+<Layout title='Daniel Carmona Gilibert'>
+	<header>
+		<!-- <Nav /> -->
+	</header>
 
-  <main class="grid grid-cols-1 mt-5 md:mt-12 gap-y-16">
-    <header
-      id="header"
-      class="flex flex-col justify-center items-center gap-y-2 md:gap-0"
-    >
-      <div class="flex md:flex-row flex-col justify-center items-center gap-5">
-        <Image
-          src={profile}
-          class="bg-gradient-to-t from-[#11111100] via-[#fde48b08] to-[#FDE48B] p-1.5 rounded-full md:w-44 md:h-44 w-36 h-36 object-cover"
-          alt="profile"
-          format="webp"
-        />
+	<main class='grid grid-cols-1 mt-5 md:mt-12 gap-y-16'>
+		<header id='header' class='flex flex-col justify-center items-center gap-y-2 md:gap-0'>
+			<div class='flex md:flex-row flex-col justify-center items-center gap-5'>
+				<Image
+					src={profile}
+					class='bg-gradient-to-t from-[#11111100] via-[#fde48b08] to-[#FDE48B] p-1.5 rounded-full md:w-44 md:h-44 w-36 h-36 object-cover'
+					alt='profile'
+					format='webp'
+				/>
 
-        <div class="flex flex-col gap-y-2">
-          <h1
-            class="text-center md:text-left md:text-5xl text-2xl leading-9 font-medium"
-          >
-            Hola soy Daniel. <br /> Front-End Developer
-          </h1>
-          <div class="flex gap-x-10">
-            <Link href="https://google.com"
-              ><Icon w={6} h={6} name="github" />GitHub</Link
-            >
+				<div class='flex flex-col gap-y-2'>
+					<h1 class='text-center md:text-left md:text-5xl text-2xl leading-9 font-medium'>
+						Hola soy Daniel. <br /> Front-End Developer
+					</h1>
+					<div class='flex gap-x-10'>
+						<Link href='https://google.com'><Icon w={6} h={6} name='github' />GitHub</Link>
 
-            <Link href="https://google.com"
-              ><Icon w={6} h={6} name="linkedin" />LinkedIn</Link
-            >
-          </div>
-        </div>
-      </div>
-    </header>
+						<Link href='https://google.com'><Icon w={6} h={6} name='linkedin' />LinkedIn</Link>
+					</div>
+				</div>
+			</div>
+		</header>
 
-    <section id="sobreMi" class="flex flex-col gap-y-5 text-left">
-      <h1 class="text-2xl leading-9 font-medium">Sobre Mi</h1>
-      <article class="flex flex-col gap-y-5">
-        <div class="flex flex-col gap-y-5 leading-8 text-gray">
-          <p>
-            Siempre interasado en seguir desarrollando en este apasionante mundo
-            del desarrollo.
-          </p>
-          <p>
-            Enfocado en ofrecer el mejor producto al cliente de forma fácil y
-            efectiva.
-          </p>
+		<section id='sobreMi' class='flex flex-col gap-y-5 text-left'>
+			<h1 class='text-2xl leading-9 font-medium'>Sobre Mi</h1>
+			<article class='flex flex-col gap-y-5'>
+				<div class='flex flex-col gap-y-5 leading-8 text-gray'>
+					<p>
+						Siempre interasado en seguir desarrollando en este apasionante mundo del desarrollo.
+					</p>
+					<p>Enfocado en ofrecer el mejor producto al cliente de forma fácil y efectiva.</p>
 
-          <p>
-            Cualquier duda o simplemente si estas interesado/a en mi no dudes en
-            conctarme en LinkedIn.
-          </p>
+					<p>
+						Cualquier duda o simplemente si estas interesado/a en mi no dudes en conctarme en
+						LinkedIn.
+					</p>
 
-          <span class="flex justify-center items-center gap-2 text-white">
-            <Link href="https://google.com"
-              ><Icon w={6} h={6} name="linkedin" />LinkedIn</Link
-            >
-          </span>
-        </div>
-      </article>
-    </section>
+					<span class='flex justify-center items-center gap-2 text-white'>
+						<Link href='https://google.com'><Icon w={6} h={6} name='linkedin' />LinkedIn</Link>
+					</span>
+				</div>
+			</article>
+		</section>
 
-    <section id="proyectos" class="flex flex-col gap-y-5">
-      <h1 class="text-left text-2xl leading-9 font-medium">Proyectos</h1>
-      <article class="flex flex-col items-center gap-y-5">
-        <ListProjects />
-        <footer class="flex flex-col justify-center items-center">
-          <span class="text-gray">Más proyectos en</span>
-          <Link href="https://google.com"
-            ><Icon w={6} h={6} name="github" />GitHub</Link
-          >
-        </footer>
-      </article>
-    </section>
-  </main>
+		<section id='proyectos' class='flex flex-col gap-y-5'>
+			<h1 class='text-left text-2xl leading-9 font-medium'>Proyectos</h1>
+			<article class='flex flex-col items-center gap-y-5'>
+				<ListProjects />
+				<footer class='flex flex-col justify-center items-center'>
+					<span class='text-gray'>Más proyectos en</span>
+					<Link href='https://google.com'><Icon w={6} h={6} name='github' />GitHub</Link>
+				</footer>
+			</article>
+		</section>
+	</main>
 
-  <Footer />
+	<Footer />
 </Layout>

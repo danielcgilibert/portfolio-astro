@@ -2,51 +2,49 @@
 import Icon from './Icon.astro'
 ---
 
-<nav class="pt-2">
-  <div class="flex justify-between">
-    <h1 class="text-xl">Daniel</h1>
+<nav class='pt-2'>
+	<div class='flex justify-between'>
+		<h1 class='text-xl'>Daniel</h1>
 
-    <ul class="hidden md:flex gap-x-5">
-      <li>Home</li>
-      <li>Projectos</li>
-      <li>Sobre Mi</li>
-    </ul>
-    <Icon additionalClass="md:hidden" name="menu" />
-  </div>
+		<ul class='hidden md:flex gap-x-5'>
+			<li>Home</li>
+			<li>Projectos</li>
+			<li>Sobre Mi</li>
+		</ul>
+		<Icon additionalClass='md:hidden' name='menu' />
+	</div>
 
-  <div
-    id="navMobile"
-    class="bg-zinc-900 hidden absolute top-0 left-0 w-full z-50 h-screen transition-all duration-700"
-  >
-    <Icon
-      additionalClass="absolute top-10 right-10 stroke-white fill-white md:hidden"
-      name="close"
-    />
+	<div
+		id='navMobile'
+		class='bg-zinc-900 hidden absolute top-0 left-0 w-full z-50 h-screen transition-all duration-700'
+	>
+		<Icon
+			additionalClass='absolute top-10 right-10 stroke-white fill-white md:hidden'
+			name='close'
+		/>
 
-    <ul
-      class="flex flex-col justify-center items-center h-screen gap-y-14 text-3xl"
-    >
-      <li>Home</li>
-      <li>Projectos</li>
-      <li>Sobre Mi</li>
-    </ul>
-  </div>
+		<ul class='flex flex-col justify-center items-center h-screen gap-y-14 text-3xl'>
+			<li>Home</li>
+			<li>Projectos</li>
+			<li>Sobre Mi</li>
+		</ul>
+	</div>
 </nav>
 
 <script>
-  const iconMenu = document.querySelector('nav>div>img[alt=menuIcon]')
-  const iconMenuClose = document.querySelector('nav>div>img[alt=closeIcon]')
-  const navMobile = document.getElementById('navMobile')
+	const iconMenu = document.querySelector('nav>div>img[alt=menuIcon]')
+	const iconMenuClose = document.querySelector('nav>div>img[alt=closeIcon]')
+	const navMobile = document.getElementById('navMobile')
 
-  const body = document.body
-  iconMenu!.addEventListener('click', () => {
-    navMobile!.classList.toggle('hidden')
+	const body = document.body
+	iconMenu!.addEventListener('click', () => {
+		navMobile!.classList.toggle('hidden')
 
-    body.classList.add('overflow-hidden')
-  })
+		body.classList.add('overflow-hidden')
+	})
 
-  iconMenuClose!.addEventListener('click', () => {
-    navMobile!.classList.toggle('hidden')
-    body.classList.remove('overflow-hidden')
-  })
+	iconMenuClose!.addEventListener('click', () => {
+		navMobile!.classList.toggle('hidden')
+		body.classList.remove('overflow-hidden')
+	})
 </script>

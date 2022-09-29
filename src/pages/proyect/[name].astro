@@ -5,30 +5,30 @@ import { proyects } from '../../data/projects'
 import Layout from '../../layouts/Layout.astro'
 
 export async function getStaticPaths() {
-  return proyects.map(({ name, desc, cover, hrefCode, hrefWeb }) => {
-    return {
-      params: { name },
-      props: { name, desc, hrefCode, hrefWeb, cover },
-    }
-  })
+	return proyects.map(({ name, desc, cover, hrefCode, hrefWeb }) => {
+		return {
+			params: { name },
+			props: { name, desc, hrefCode, hrefWeb, cover }
+		}
+	})
 }
 
 const { name, desc, hrefCode, hrefWeb, cover } = Astro.props
 ---
 
 <Layout>
-  <p>Artículo: {name}</p>
-  <p>{desc}</p>
-  <Image
-    width={500}
-    height={500}
-    alt={name}
-    class="rounded-lg p-0.5 object-cover object-top"
-    quality={100}
-    src={import(`../../assets/${cover}.jpg`)}
-  />
-  <p>{hrefCode}</p>
-  <p>{hrefWeb}</p>
+	<p>Artículo: {name}</p>
+	<p>{desc}</p>
+	<Image
+		width={500}
+		height={500}
+		alt={name}
+		class='rounded-lg p-0.5 object-cover object-top'
+		quality={100}
+		src={import(`../../assets/${cover}.jpg`)}
+	/>
+	<p>{hrefCode}</p>
+	<p>{hrefWeb}</p>
 
-  <Footer />
+	<Footer />
 </Layout>

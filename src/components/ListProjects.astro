@@ -4,46 +4,36 @@ import Card from './Card.astro'
 import Link from './Link.astro'
 ---
 
-<div class="grid grid-cols-1 md:grid-cols-3 md:gap-x-5 gap-y-5">
-  {
-    proyects.map(({ cover, name, desc, hrefWeb, hrefCode }) => (
-      <Link href={`/portfolio-astro/proyect/${name}`}>
-        <Card
-          border="t"
-          title={name}
-          img={cover}
-          hrefWeb={hrefWeb}
-          hrefCode={hrefCode}
-        />
-      </Link>
-    ))
-  }
+<div class='grid grid-cols-1 md:grid-cols-3 md:gap-x-5 gap-y-5'>
+	{
+		proyects.map(({ cover, name, desc, hrefWeb, hrefCode }) => (
+			<Link href={`/portfolio-astro/proyect/${name}`}>
+				<Card border='t' title={name} img={cover} hrefWeb={hrefWeb} hrefCode={hrefCode} />
+			</Link>
+		))
+	}
 </div>
-<button class="bg-gray bg-opacity-10 rounded-lg w-1/2">Ver más</button>
+<button class='bg-gray bg-opacity-10 rounded-lg w-1/2'>Ver más</button>
 
 <style>
-  div :global(a):nth-child(n + 4) {
-    @apply hidden;
-  }
+	div :global(a):nth-child(n + 4) {
+		@apply hidden;
+	}
 </style>
 
 <script>
-  const buttonShowMore = document.querySelector(
-    '#proyectos button'
-  ) as HTMLInputElement
-  const proyects = document.querySelectorAll(
-    '#proyectos article > div > a:nth-child(n + 4)'
-  )
+	const buttonShowMore = document.querySelector('#proyectos button') as HTMLInputElement
+	const proyects = document.querySelectorAll('#proyectos article > div > a:nth-child(n + 4)')
 
-  buttonShowMore.addEventListener('click', () => {
-    proyects.forEach(proyect => {
-      if (window.getComputedStyle(proyect).display === 'none') {
-        proyect.style.setProperty('display', 'flex')
-        buttonShowMore.innerText = 'Ver menos'
-      } else {
-        proyect.style.setProperty('display', 'none')
-        buttonShowMore.innerText = 'Ver más'
-      }
-    })
-  })
+	buttonShowMore.addEventListener('click', () => {
+		proyects.forEach((proyect) => {
+			if (window.getComputedStyle(proyect).display === 'none') {
+				;(proyect as HTMLElement).style.setProperty('display', 'flex')
+				buttonShowMore.innerText = 'Ver menos'
+			} else {
+				;(proyect as HTMLElement).style.setProperty('display', 'none')
+				buttonShowMore.innerText = 'Ver más'
+			}
+		})
+	})
 </script>
