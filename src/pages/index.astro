@@ -5,12 +5,13 @@ import Footer from '../components/Footer.astro'
 import Icon from '../components/Icon.astro'
 import Link from '../components/Link.astro'
 import ListProjects from '../components/ListProjects.astro'
+import Nav from '../components/Nav.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title='Daniel Carmona Gilibert'>
 	<header>
-		<!-- <Nav /> -->
+		<Nav />
 	</header>
 
 	<main class='grid grid-cols-1 mt-5 md:mt-12 gap-y-16'>
@@ -37,7 +38,11 @@ import Layout from '../layouts/Layout.astro'
 		</header>
 
 		<section id='sobreMi' class='flex flex-col gap-y-5 text-left'>
-			<h1 class='text-2xl leading-9 font-medium'>Sobre Mi</h1>
+			<h1
+				class='text-2xl leading-9 font-medium transition-all ease-in-out delay-300 duration-300 opacity-10'
+			>
+				Sobre Mi
+			</h1>
 			<article class='flex flex-col gap-y-5'>
 				<div class='flex flex-col gap-y-5 leading-8 text-gray'>
 					<p>
@@ -58,7 +63,11 @@ import Layout from '../layouts/Layout.astro'
 		</section>
 
 		<section id='proyectos' class='flex flex-col gap-y-5'>
-			<h1 class='text-left text-2xl leading-9 font-medium'>Proyectos</h1>
+			<h1
+				class='text-left text-2xl leading-9 font-medium transition-all ease-in-out delay-300 duration-300 opacity-10'
+			>
+				Proyectos
+			</h1>
 			<article class='flex flex-col items-center gap-y-5'>
 				<ListProjects />
 				<footer class='flex flex-col justify-center items-center'>
@@ -71,3 +80,26 @@ import Layout from '../layouts/Layout.astro'
 
 	<Footer />
 </Layout>
+
+<script>
+	const proyectos = document.getElementById('proyectos') as HTMLElement | null
+	const sobreMi = document.getElementById('sobreMi')
+
+	window.addEventListener('scroll', (event) => {
+		// console.log(sobreMi.clientHeight)
+		const proyect = document.getElementById('proyectos')
+		const sobreMi = document.getElementById('sobreMi')
+
+		if (window.pageYOffset >= sobreMi.getBoundingClientRect().y) {
+			sobreMi.querySelector('h1').classList.add('opacity-100')
+		} else {
+			sobreMi.querySelector('h1').classList.remove('opacity-100')
+		}
+
+		if (window.pageYOffset >= proyect.getBoundingClientRect().y) {
+			proyect.querySelector('h1').classList.add('opacity-100')
+		} else {
+			proyectos.querySelector('h1').classList.remove('opacity-100')
+		}
+	})
+</script>
