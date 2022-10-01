@@ -87,25 +87,36 @@ import Layout from '../layouts/Layout.astro'
 	const proyectos = document.getElementById('proyectos') as HTMLElement | null
 	const sobreMi = document.getElementById('sobreMi')
 
+	const elementInView = (el: HTMLElement, scrollOffset = 0) => {
+		const elementTop = el.getBoundingClientRect().top
+
+		return (
+			elementTop <= (window.innerHeight || document.documentElement.clientHeight) - scrollOffset
+		)
+	}
+
 	window.addEventListener('scroll', (event) => {
-		// console.log(sobreMi.clientHeight)
 		const proyect = document.getElementById('proyectos')
 		const sobreMi = document.getElementById('sobreMi')
 
-		if (window.pageYOffset >= sobreMi.getBoundingClientRect().y) {
+		//window.scrollY = número de pixeles que el usuario a hecho scroll
+		//window.innerHeight = El número en pixeles de la ventana
+		//getBoundingClientRect().y = Devuelve un objecto con información sobre el tamaño y la posición relativa al viewport
+		let scrollPercentage = Math.round(
+			(window.scrollY / (document.body.clientHeight - window.innerHeight)) * 100
+		)
+
+		console.log(scrollPercentage)
+		if (scrollPercentage > 5) {
 			sobreMi.querySelector('h1').classList.add('opacity-100')
 		} else {
 			sobreMi.querySelector('h1').classList.remove('opacity-100')
 		}
 
-		if (window.pageYOffset >= proyect.getBoundingClientRect().y) {
+		if (scrollPercentage > 25) {
 			proyect.querySelector('h1').classList.add('opacity-100')
 		} else {
 			proyectos.querySelector('h1').classList.remove('opacity-100')
 		}
 	})
 </script>
-
-<style>
-
-</style>
