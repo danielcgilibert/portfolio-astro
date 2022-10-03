@@ -13,11 +13,11 @@ import Link from './Link.astro'
 		))
 	}
 </div>
-<button class='bg-gray bg-opacity-10 rounded-lg w-full md:w-1/2 py-2'>Ver más</button>
+<button class='bg-gray bg-opacity-10 rounded-lg w-full md:w-80 py-2'>Ver más</button>
 
 <style>
 	div :global(a):nth-child(n + 4) {
-		@apply hidden;
+		@apply hidden opacity-0;
 	}
 </style>
 
@@ -27,13 +27,17 @@ import Link from './Link.astro'
 
 	buttonShowMore.addEventListener('click', () => {
 		proyects.forEach((proyect) => {
-			if (window.getComputedStyle(proyect).display === 'none') {
-				;(proyect as HTMLElement).style.setProperty('display', 'flex')
-				buttonShowMore.innerText = 'Ver menos'
-			} else {
-				;(proyect as HTMLElement).style.setProperty('display', 'none')
-				buttonShowMore.innerText = 'Ver más'
-			}
+			;(proyect as HTMLElement).style.setProperty('display', 'flex')
+			;(proyect as HTMLElement).style.setProperty('opacity', '0')
+			proyect.clientWidth
+			;(proyect as HTMLElement).classList.add(
+				'transition-all',
+				'ease-linear',
+				'delay-250',
+				'duration-250'
+			)
+			;(proyect as HTMLElement).style.setProperty('opacity', '1')
+			buttonShowMore.classList.add('hidden')
 		})
 	})
 </script>
