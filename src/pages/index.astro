@@ -106,7 +106,6 @@ import Layout from '../layouts/Layout.astro'
 			(window.scrollY / (document.body.clientHeight - window.innerHeight)) * 100
 		)
 
-		console.log(scrollPercentage)
 		if (scrollPercentage > 5) {
 			sobreMi.querySelector('h1').classList.add('opacity-100')
 		} else {
