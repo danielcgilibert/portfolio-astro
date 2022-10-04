@@ -1,15 +1,12 @@
 ---
 import { proyects } from '../data/projects'
 import Card from './Card.astro'
-import Link from './Link.astro'
 ---
 
 <div class='grid grid-cols-1 md:grid-cols-3 md:gap-x-5 gap-y-5'>
 	{
 		proyects.map(({ cover, name, desc, hrefWeb, hrefCode }) => (
-			<Link href={`/portfolio-astro/proyect/${name}`}>
-				<Card border='t' title={name} img={cover} hrefWeb={hrefWeb} hrefCode={hrefCode} />
-			</Link>
+			<Card border='t' title={name} img={cover} hrefWeb={hrefWeb} hrefCode={hrefCode} />
 		))
 	}
 </div>
@@ -19,14 +16,14 @@ import Link from './Link.astro'
 >
 
 <style>
-	div :global(a):nth-child(n + 4) {
+	div :global(div):nth-child(n + 4) {
 		@apply hidden opacity-0;
 	}
 </style>
 
 <script>
 	const buttonShowMore = document.querySelector('#proyectos button') as HTMLInputElement
-	const proyects = document.querySelectorAll('#proyectos article > div > a:nth-child(n + 4)')
+	const proyects = document.querySelectorAll('#proyectos article > div > div:nth-child(n + 4)')
 
 	buttonShowMore.addEventListener('click', () => {
 		proyects.forEach((proyect) => {
