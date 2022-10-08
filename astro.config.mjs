@@ -5,7 +5,7 @@ import image from '@astrojs/image'
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), image()],
-  site: 'https://danielcgilibert.github.io',
-  base: '/portfolio-astro',
+	integrations: [tailwind(), image()],
+	site: 'https://danielcgilibert.github.io',
+	base: '/'
 })
