@@ -7,5 +7,5 @@ import image from '@astrojs/image'
 export default defineConfig({
 	integrations: [tailwind(), image()],
 	site: 'https://danielcgilibert.github.io',
-	base: '/'
+	base: '/portfolio-astro/'
 })
