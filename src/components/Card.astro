@@ -23,7 +23,7 @@ const {
 } = Astro.props
 ---
 
-<div class='relative'>
+<div class='relative rounded-md hover:border-2 transition-all duration-100'>
 	<Image
 		width={width}
 		height={height}
@@ -36,29 +36,14 @@ const {
 	/>
 
 	<div
-		class='este absolute top-50 bottom-0 left-0 flex justify-around items-center px-5 bg-black rounded-t-sm w-full'
+		class='absolute top-0 bottom-0 left-0 rounded-t-sm flex justify-end items-start p-2 gap-x-2 w-full'
 	>
-		<div class='flex flex-col justify-center items-center py-2'>
-			<Link href={hrefCode} additionalClass='flex-col 	'>
-				<img src='./icons/github.svg' class='w-10 border-2 rounded-full' />
-			</Link>
-		</div>
+		<Link href={hrefCode}>
+			<img src='./icons/github.svg' alt='code' class='w-8 border-2 rounded-full' />
+		</Link>
 
-		<div class='flex flex-col justify-center items-center'>
-			<Link href={hrefWeb} additionalClass='flex-col	'>
-				<img src='./icons/web.svg' alt='' class='w-10 bg-white rounded-full border-2' />
-			</Link>
-		</div>
+		<Link href={hrefWeb}>
+			<img src='./icons/web.svg' alt='web' class='w-8 bg-white rounded-full border-2' />
+		</Link>
 	</div>
 </div>
-
-<style>
-	.este {
-		background: rgba(0, 0, 0, 0.5);
-		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-		backdrop-filter: blur(12px);
-		-webkit-backdrop-filter: blur(12px);
-	}
-</style>
-
-<script></script>
