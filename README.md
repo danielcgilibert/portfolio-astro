@@ -1,40 +1,36 @@
-# Welcome to my  [portfolio](danielcgilibert.github.io/portfolio-astro/)
+<h1 align="center">Welcome to Astro Portfolio 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
+</p>
 
+> Creating a portfolio with astro
 
-> 🔨 in development
+### 🏠 [Homepage](https://danielcgilibert.github.io/portfolio-astro/)
 
-<img src="src/assets/readmeport.png" />
+### ✨ [Demo](https://danielcgilibert.github.io/portfolio-astro/)
 
+## Install
 
-
-## 🚀 Project Structure
-
-
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```sh
+yarn install
 ```
 
+## Usage
 
-## 🧞 Commands
+```sh
+yarn run start
+```
 
-All commands are run from the root of the project, from a terminal:
+## Author
 
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `npm install`          | Installs dependencies                              |
-| `npm run dev`          | Starts local dev server at `localhost:3000`        |
-| `npm run build`        | Build your production site to `./dist/`            |
-| `npm run preview`      | Preview your build locally, before deploying       |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `npm run astro --help` | Get help using the Astro CLI                       |
+👤 **Daniel Carmona Gilibert**
 
+* Website: danielcg.dev
+* Github: [@danielcgilibert](https://github.com/danielcgilibert)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
