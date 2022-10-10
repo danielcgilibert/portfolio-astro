@@ -18,30 +18,22 @@ const {
 	img = null,
 	hrefCode = null,
 	hrefWeb = null,
-	width = 300,
-	height = 250
+	width = 220,
+	height = 320
 } = Astro.props
 ---
 
-<div class='relative rounded-md hover:border-2 transition-all duration-100'>
-	<Image
-		width={width}
-		height={height}
-		alt={title}
-		fit='cover'
-		class='rounded-lg p-0.5 object-top'
-		src={import(`../assets/${img}.jpg`)}
-		quality={100}
-		format='webp'
-	/>
-
-	<div class='absolute top-0 bottom-0 rounded-t-sm flex items-start p-2 gap-x-2 w-full'>
-		<Link href={hrefCode}>
-			<img src='./icons/github.svg' alt='code' class='w-8 border-2 rounded-full' />
-		</Link>
-
-		<Link href={hrefWeb}>
-			<img src='./icons/web.svg' alt='web' class='w-8 bg-white rounded-full border-2' />
-		</Link>
-	</div>
+<div class='rounded-md hover:bg-white transition-all duration-100'>
+	<Link href={hrefCode}>
+		<Image
+			width={width}
+			height={height}
+			alt={title}
+			fit='cover'
+			class='rounded-lg p-0.5 object-top'
+			src={import(`../assets/${img}.jpg`)}
+			quality={100}
+			format='webp'
+		/>
+	</Link>
 </div>

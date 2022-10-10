@@ -3,7 +3,7 @@ import { proyects } from '../data/projects'
 import Card from './Card.astro'
 ---
 
-<div class='w-full grid grid-cols-1 md:grid-cols-3 md:gap-x-5 gap-y-5'>
+<div class='grid grid-cols-1 md:grid-cols-3 md:gap-x-5 gap-y-5'>
 	{
 		proyects.map(({ cover, name, desc, hrefWeb, hrefCode }) => (
 			<Card border='t' title={name} desc={desc} img={cover} hrefWeb={hrefWeb} hrefCode={hrefCode} />
