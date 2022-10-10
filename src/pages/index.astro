@@ -107,15 +107,15 @@ import Layout from '../layouts/Layout.astro'
 		)
 
 		if (scrollPercentage > 5) {
-			sobreMi.querySelector('h1').classList.add('opacity-100')
+			sobreMi?.querySelector('h1')?.classList.add('opacity-100')
 		} else {
-			sobreMi.querySelector('h1').classList.remove('opacity-100')
+			sobreMi?.querySelector('h1')?.classList.remove('opacity-100')
 		}
 
 		if (scrollPercentage > 25) {
-			proyect.querySelector('h1').classList.add('opacity-100')
+			proyect?.querySelector('h1')?.classList.add('opacity-100')
 		} else {
-			proyectos.querySelector('h1').classList.remove('opacity-100')
+			proyectos?.querySelector('h1')?.classList.remove('opacity-100')
 		}
 	})
 </script>
