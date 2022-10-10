@@ -1,6 +1,6 @@
 export const proyects = [
 	{
-		cover: 'filmoteca',
+		cover: 'filmoteca2',
 		name: 'Filmoteca',
 		desc: 'Aplicación de películas con llamadas a distintas API, construida con firebase y react',
 		hrefCode: 'https://github.com/danielcgilibert/Filmoteca',
