@@ -18,7 +18,7 @@ const {
 	img = null,
 	hrefCode = null,
 	hrefWeb = null,
-	width = 280,
+	width = 350,
 	height = 350
 } = Astro.props
 ---
@@ -26,13 +26,10 @@ const {
 <div class='rounded-md hover:bg-white transition-all duration-100'>
 	<Link href={hrefCode}>
 		<Image
-			width={width}
-			height={height}
-			alt={title}
-			class='rounded-lg p-0.5 object-top'
 			src={import(`../assets/${img}.jpg`)}
-			quality={100}
-			format='jpg'
+			class='rounded-lg p-0.5 w-56 h-64 object-cover'
+			alt={title}
+			format='webp'
 		/>
 	</Link>
 </div>
