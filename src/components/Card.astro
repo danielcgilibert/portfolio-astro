@@ -26,13 +26,11 @@ const {
 <div class='rounded-md hover:bg-white transition-all duration-100'>
 	<Link href={hrefCode}>
 		<Image
-			width={width}
-			height={height}
+			width={500}
+			aspectRatio={1 / 1}
 			alt={title}
 			class='rounded-lg p-0.5 object-top'
 			src={import(`../assets/${img}.jpg`)}
-			quality={100}
-			format='jpg'
 		/>
 	</Link>
 </div>
