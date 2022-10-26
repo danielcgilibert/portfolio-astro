@@ -1,6 +1,6 @@
 ---
 export interface Props {
-	href: string
+	href: string | null
 	additionalClass?: string
 	blank?: boolean
 }
@@ -9,7 +9,9 @@ const { href, additionalClass = '', blank = true } = Astro.props
 ---
 
 <a
-	class={`flex justify-center items-center gap-2 hover:text-white ${additionalClass}`}
+	class={`flex justify-center items-center gap-2 hover:text-white ${additionalClass} ${
+		href ? '' : 'pointer-events-none opacity-20'
+	}`}
 	rel='noopener noreferrer'
 	href={href}
 	target={`${blank ? '_blank' : ''}`}

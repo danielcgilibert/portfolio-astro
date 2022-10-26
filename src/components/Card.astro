@@ -1,5 +1,6 @@
 ---
 import { Image } from '@astrojs/image/components'
+import Icon from './Icon.astro'
 import Link from './Link.astro'
 
 export interface Props {
@@ -23,7 +24,15 @@ const {
 } = Astro.props
 ---
 
-<div class='rounded-md hover:bg-white transition-all duration-100'>
+<div class='relative rounded-md transition-all duration-100'>
+	<div
+		class='flex justify-around px-2 py-1 absolute bg-[#20171B] bg-opacity-95 bottom-3 left-0 right-0 mx-auto z-10 w-3/4 rounded-lg'
+	>
+		<Link href={hrefCode}
+			><Icon h={6} h={6} name='github' additionalClass={' bg-white p-[1px]  '} />
+		</Link>
+		<Link href={hrefWeb}><Icon name='web2' h={6} h={6} additionalClass={'bg-white'} /></Link>
+	</div>
 	<Link href={hrefCode}>
 		<Image
 			src={import(`../assets/${img}.jpg`)}
