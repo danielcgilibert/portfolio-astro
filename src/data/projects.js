@@ -25,14 +25,14 @@ export const proyects = [
 		name: 'Chart',
 		desc: 'Gráfica dinamica',
 		hrefCode: 'https://github.com/danielcgilibert/Frontend-Mentor---Expenses-chart-component',
-		hrefWeb: 'danielcgilibert.github.io/Frontend-Mentor---Expenses-chart-component/'
+		hrefWeb: 'https://danielcgilibert.github.io/Frontend-Mentor---Expenses-chart-component/'
 	},
 	{
 		cover: 'grid',
 		name: 'Layout Grid',
 		desc: 'Gráfica dinamica',
 		hrefCode: 'https://github.com/danielcgilibert/Frontend-Mentor---Testimonials-grid-section',
-		hrefWeb: 'danielcgilibert.github.io/Frontend-Mentor---Testimonials-grid-section/'
+		hrefWeb: 'https://danielcgilibert.github.io/Frontend-Mentor---Testimonials-grid-section/'
 	},
 
 	// {
