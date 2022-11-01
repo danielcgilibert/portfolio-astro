@@ -35,19 +35,19 @@ const { title } = Astro.props
 				background: radial-gradient(circle, rgba(34, 17, 26, 1) 10%, rgba(0, 0, 0, 1) 89%);
 				/* background-size: 400% 400%; */
 				/* background-repeat: repeat; */
-				/* animation: gradient 12s ease infinite; */
+				animation: gradient 2s linear;
+				scroll-behavior: smooth;
 			}
-			/* @keyframes gradient {
-				0% {
-					background-position: 0% 100%;
+
+			@keyframes gradient {
+				from {
+					opacity: 0;
 				}
-				50% {
-					background-position: 50% 10%;
+
+				to {
+					opacity: 1;
 				}
-				100% {
-					background-position: 100% 50%;
-				}
-			} */
+			}
 		</style>
 	</body>
 </html>
