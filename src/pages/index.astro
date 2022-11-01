@@ -90,6 +90,21 @@ import Layout from '../layouts/Layout.astro'
 	<Footer />
 </Layout>
 
+<style>
+	main {
+		animation: gradient 1.5s ease-in;
+	}
+
+	@keyframes gradient {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+</style>
 <script>
 	const proyectos = document.getElementById('proyectos') as HTMLElement | null
 	const sobreMi = document.getElementById('sobreMi')
