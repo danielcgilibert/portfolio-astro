@@ -4,13 +4,16 @@ import Link from './Link.astro'
 const {} = Astro.props
 ---
 
-<footer class='border-t-2 border-white text-gray mt-16'>
+<footer class='border-t-2 border-white border-opacity-5 text-gray mt-16'>
 	<ul
 		class='grid grid-cols-1 grid-rows-3 md:grid-cols-3 md:grid-rows-1 gap-y-5 p-5 justify-items-center text-center'
 	>
 		<li><Link href='#header' blank={false}>Home</Link></li>
 		<li><Link href='#proyectos' blank={false}>Proyectos</Link></li>
 		<li><Link href='#sobreMi' blank={false}>Sobre Mi</Link></li>
+		<li><Link href='/snippets' blank={false}>Snippets</Link></li>
+		<li><Link href='/blog' blank={false}>Blog</Link></li>
+		<li><Link href='https://status.danielcg.dev/' blank={true}>Status</Link></li>
 	</ul>
 	<p class='text-center text-md mt-5'>Portfolio desarrollado con</p>
 	<p class='text-center text-xl'>Astro</p>

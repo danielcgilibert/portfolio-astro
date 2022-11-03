@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro'
+const posts = await Astro.glob('../pages/snippets/*.mdx')
+---
+
+<Layout title='Daniel - Snippets'>
+	<h1>Snippets</h1>
+	<main class='grid grid-cols-1 md:grid-cols-2 gap-5 py-2 text-2xl text-gray'>
+		{
+			posts.map((post) => (
+				<a
+					class='flex flex-col gap-2 text-gray hover:text-white border-2 border-white border-opacity-10 hover:border-opacity-50  rounded-md p-5'
+					href={post.url}
+				>
+					{post.frontmatter.title}
+					<p class='text-sm'> {post.frontmatter.description}</p>
+				</a>
+			))
+		}
+	</main>
+</Layout>
