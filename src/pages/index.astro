@@ -38,7 +38,7 @@ import Layout from '../layouts/Layout.astro'
 
 		<section id='sobreMi' class='flex flex-col gap-y-5 text-left'>
 			<h1
-				class='prose text-3xl text-white leading-9 font-medium transition-colors ease-in-out delay-300 duration-300 opacity-10'
+				class='prose text-3xl text-white leading-9 font-medium transition-opacity ease-in-out delay-300 duration-300 opacity-10'
 			>
 				Sobre Mi
 			</h1>
@@ -67,7 +67,7 @@ import Layout from '../layouts/Layout.astro'
 
 		<section id='proyectos' class='flex flex-col gap-y-5'>
 			<h1
-				class='text-left text-3xl leading-9 font-medium transition-colors ease-in-out delay-300 duration-300 opacity-10'
+				class='text-left text-3xl leading-9 font-medium transition-opacity ease-in-out delay-300 duration-300 opacity-10'
 			>
 				Proyectos
 			</h1>
@@ -103,6 +103,7 @@ import Layout from '../layouts/Layout.astro'
 </style>
 <script>
 	const proyectos = document.getElementById('proyectos') as HTMLElement | null
+	const sobreMi = document.getElementById('sobreMi')
 
 	const elementInView = (el: HTMLElement, scrollOffset = 0) => {
 		const elementTop = el.getBoundingClientRect().top
