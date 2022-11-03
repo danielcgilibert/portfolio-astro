@@ -38,7 +38,7 @@ import Layout from '../layouts/Layout.astro'
 
 		<section id='sobreMi' class='flex flex-col gap-y-5 text-left'>
 			<h1
-				class='prose text-3xl text-white leading-9 font-medium transition-all ease-in-out delay-300 duration-300 opacity-10'
+				class='prose text-3xl text-white leading-9 font-medium transition-colors ease-in-out delay-300 duration-300 opacity-10'
 			>
 				Sobre Mi
 			</h1>
@@ -67,7 +67,7 @@ import Layout from '../layouts/Layout.astro'
 
 		<section id='proyectos' class='flex flex-col gap-y-5'>
 			<h1
-				class='text-left text-3xl leading-9 font-medium transition-all ease-in-out delay-300 duration-300 opacity-10'
+				class='text-left text-3xl leading-9 font-medium transition-colors ease-in-out delay-300 duration-300 opacity-10'
 			>
 				Proyectos
 			</h1>
@@ -88,7 +88,7 @@ import Layout from '../layouts/Layout.astro'
 
 <style>
 	main {
-		animation: gradient 0.5s;
+		animation: gradient 0.2s;
 	}
 
 	@keyframes gradient {
@@ -103,7 +103,6 @@ import Layout from '../layouts/Layout.astro'
 </style>
 <script>
 	const proyectos = document.getElementById('proyectos') as HTMLElement | null
-	const sobreMi = document.getElementById('sobreMi')
 
 	const elementInView = (el: HTMLElement, scrollOffset = 0) => {
 		const elementTop = el.getBoundingClientRect().top
@@ -116,10 +115,6 @@ import Layout from '../layouts/Layout.astro'
 	window.addEventListener('scroll', (event) => {
 		const proyect = document.getElementById('proyectos')
 		const sobreMi = document.getElementById('sobreMi')
-
-		//window.scrollY = número de pixeles que el usuario a hecho scroll
-		//window.innerHeight = El número en pixeles de la ventana
-		//getBoundingClientRect().y = Devuelve un objecto con información sobre el tamaño y la posición relativa al viewport
 		let scrollPercentage = Math.round(
 			(window.scrollY / (document.body.clientHeight - window.innerHeight)) * 100
 		)

@@ -18,14 +18,14 @@ const { frontmatter } = Astro.props
 			type='image/svg+xml'
 			href='https://avatars.githubusercontent.com/u/44914786?s=280&v=4'
 		/>
-		<link
+		<!-- <link
 			rel='stylesheet'
 			href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css'
 		/>
 		<link
 			rel='stylesheet'
 			href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-dark.min.css'
-		/>
+		/> -->
 		<meta name='description' content='portfolio de daniel carmona gilibert' />
 		<meta name='generator' content={Astro.generator} />
 		<title>{frontmatter.title}</title>
@@ -52,7 +52,6 @@ const { frontmatter } = Astro.props
 			margin: 0;
 			padding: 0;
 			background: radial-gradient(circle, rgba(34, 17, 26, 1) 10%, rgba(0, 0, 0, 1) 89%);
-
 			scroll-behavior: smooth;
 		}
 	</style>
