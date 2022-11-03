@@ -1,49 +1,51 @@
 ---
+import Icon from './Icon.astro'
+const pathname = new URL(Astro.request.url).pathname
+const currentPath = pathname.split('/')[1]
 ---
 
-<nav class='pt-2'>
-	<!-- <div class='flex justify-between'>
-		<h1 class='text-xl'>Daniel</h1>
-
-		<ul class='hidden md:flex gap-x-5'>
-			<li>Home</li>
-			<li>Projectos</li>
-			<li>Sobre Mi</li>
-		</ul>
-		<Icon additionalClass='md:hidden' name='menu' />
-	</div>
-
+<nav>
 	<div
-		id='navMobile'
-		class='bg-zinc-900 hidden absolute top-0 left-0 w-full z-50 h-screen transition-all duration-700'
+		id='nav'
+		class='bg-black absolute p-40 md:p-8 md:px-2 md:static md:flex w-screen h-screen -top-full md:bg-transparent md:w-full md:h-6 left-0 z-10 transition-all 0.3 border-b-2 border-white border-opacity-5'
 	>
-		<Icon
-			additionalClass='absolute top-10 right-10 stroke-white fill-white md:hidden'
-			name='close'
-		/>
-
-		<ul class='flex flex-col justify-center items-center h-screen gap-y-14 text-3xl'>
-			<li>Home</li>
-			<li>Projectos</li>
-			<li>Sobre Mi</li>
+		<ul class='flex flex-col md:flex-row justify-start items-center gap-5 text-zinc-600 w-full'>
+			<li>
+				<a
+					class={`hover:bg-[#222222]  p-2 rounded-lg ${currentPath === '' ? 'active' : ''}`}
+					href='/'>Home</a
+				>
+			</li>
+			<li>
+				<a
+					class={`hover:bg-[#222222]  p-2 rounded-lg ${currentPath === 'snippets' ? 'active' : ''}`}
+					href='/snippets'>Snippets</a
+				>
+			</li>
+			<li>
+				<a
+					class={`hover:bg-[#222222]  p-2 rounded-lg ${currentPath === 'blog' ? 'active' : ''}`}
+					href='/blog'>Blog</a
+				>
+			</li>
 		</ul>
-	</div> -->
+	</div>
+	<Icon id='hamburguer' additionalClass='z-20 absolute top-2 right-5  md:hidden' name='menu' />
 </nav>
 
+<style>
+	.show-nav--active {
+		@apply top-0;
+	}
+	.active {
+		@apply text-white;
+	}
+</style>
 <script>
-	// const iconMenu = document.querySelector('nav>div>img[alt=menuIcon]')
-	// const iconMenuClose = document.querySelector('nav>div>img[alt=closeIcon]')
-	// const navMobile = document.getElementById('navMobile')
+	const nav = document.getElementById('nav')
 
-	// const body = document.body
-	// iconMenu!.addEventListener('click', () => {
-	// 	navMobile!.classList.toggle('hidden')
-
-	// 	body.classList.add('overflow-hidden')
-	// })
-
-	// iconMenuClose!.addEventListener('click', () => {
-	// 	navMobile!.classList.toggle('hidden')
-	// 	body.classList.remove('overflow-hidden')
-	// })
+	document.getElementById('hamburguer')?.addEventListener('click', () => {
+		nav?.classList.toggle('show-nav--active')
+		document.body.classList.toggle('overflow-hidden')
+	})
 </script>
