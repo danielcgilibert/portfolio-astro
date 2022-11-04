@@ -1,4 +1,4 @@
-<img src="/Users/danielcarmona/Documents/projects/new-portfolio/public/PortfolioAstro.png?raw=true"/>
+<img src="https://github.com/danielcgilibert/portfolio-astro/blob/main/public/PortfolioAstro.png?raw=true?raw=true"/>
 
 <div align="center">
   
