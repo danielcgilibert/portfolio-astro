@@ -1,22 +1,23 @@
-<h1 align="center">Welcome to Astro Portfolio 👋</h1>
+<img src="https://github.com/danielcgilibert/portfolio-astro/blob/main/public/PortfolioAstro.png?raw=true"/>
+
+<div align="center">
+  
+![GitHub state](https://img.shields.io/github/deployments/danielcgilibert/portfolio-astro/production)
+![GitHub issues]( https://img.shields.io/github/issues/danielcgilibert/portfolio-astro )
+![GitHub start](https://img.shields.io/github/stars/danielcgilibert/portfolio-astro )
+
+  
+</div>
+
+## ⚒ Stack
+
+- ✅ **Framework**: [Astro](https://astro.build/).
+- ✅ **Styling**: [TailwindCSS](https://tailwindcss.com/).
+- ✅ **Language**: [TypeScript](https://www.typescriptlang.org/).
 
 
-## Install
 
-```sh
-yarn install
-```
+## 🎉 Deploy on Vercel
 
-## Usage
-
-```sh
-yarn run start
-```
-
-## Author
-
-👤 **DanielCG**
-
-* Website: danielcg.dev
-* Github: [@danielcgilibert](https://github.com/danielcgilibert)
+- ✅ [https://danielcg.dev/](https://danielcg.dev/).
 
