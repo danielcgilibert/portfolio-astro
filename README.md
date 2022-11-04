@@ -1,4 +1,4 @@
-<img src="https://github.com/danielcgilibert/portfolio-astro/blob/main/public/PortfolioAstro.png?raw=true"/>
+<img src="/Users/danielcarmona/Documents/projects/new-portfolio/public/PortfolioAstro.png?raw=true"/>
 
 <div align="center">
   
@@ -6,7 +6,6 @@
 ![GitHub issues]( https://img.shields.io/github/issues/danielcgilibert/portfolio-astro )
 ![GitHub start](https://img.shields.io/github/stars/danielcgilibert/portfolio-astro )
 
-  
 </div>
 
 ## ⚒ Stack
@@ -15,9 +14,6 @@
 - ✅ **Styling**: [TailwindCSS](https://tailwindcss.com/).
 - ✅ **Language**: [TypeScript](https://www.typescriptlang.org/).
 
-
-
 ## 🎉 Deploy on Vercel
 
 - ✅ [https://danielcg.dev/](https://danielcg.dev/).
-
