@@ -131,10 +131,10 @@
   dependencies:
     prismjs "^1.28.0"
 
-"@astrojs/tailwind@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@astrojs/tailwind/-/tailwind-2.0.1.tgz#f7c7d1ca28b5cd831934c1410c142ac16f10efda"
-  integrity sha512-fvruoVEvx0zQsVY2AVRrhvH25zp6xTF8Wb1Lu43KXLoxU7fHIB1fcTTRP+Qhd4f5EvuTmuPKaKwHmbrv8mTV9A==
+"@astrojs/tailwind@2.1.2":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@astrojs/tailwind/-/tailwind-2.1.2.tgz#0004fb05bb574b0110cb5c4874bd611764cfc5a7"
+  integrity sha512-nIrlT+WWp/Wv2VQ29Nvncq608E+j3qB9k1f7yiAjY2ijxizZo4OnQzdRPQcIjIZHL5YxPtzbcoSP2u3v+Domqw==
   dependencies:
     "@proload/core" "^0.3.2"
     autoprefixer "^10.4.7"
