@@ -14,7 +14,7 @@
     "@astrojs/mdx": "^0.11.6",
     "@astrojs/tailwind": "2.1.2",
     "@typescript-eslint/parser": "^5.43.0",
-    "astro": "1.6.10",
+    "astro": "1.6.11",
     "normalize.css": "^8.0.1",
     "prettier": "^2.8.0",
     "prettier-plugin-astro": "^0.7.0",
